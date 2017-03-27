@@ -1,0 +1,54 @@
+nav ul{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: red;
+	justify-content: space-between;
+}
+
+ul li{
+	margin: 0 1em 0 1em;
+}
+ol{
+	padding: 0;
+	margin: 1em;
+	list-style-type: none;
+}
+ol li{
+	margin: .5em;
+}
+#pokeList{
+	margin: 67.3px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;	
+}
+#searchInput{
+	position: fixed;
+	top: 67.3px;
+	right: 0;
+	display: none;
+	color: white;
+	background-color: rgba(0, 0, 0, .8);
+}
+#menu{
+	display: none;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 67.3px;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, .8);
+	color: white;
+}
