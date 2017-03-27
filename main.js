@@ -1,5 +1,5 @@
 var pokeList = $("#pokeList");
-var counter = 0;
+var counter = 1;
 var pocketMonsters = [];
 
 $(document).ready(function(){
@@ -12,8 +12,9 @@ $(document).ready(function(){
 			success: function(pokemon){
 				console.log("success");
 				counter++;
-				$( "#progressbar" ).progressbar({
-  					value: (counter/48)*100
+				$("#progressbar").progressbar({
+  					value: (counter/49)*100,
+  					complete: $("#progressbar").hide()
 				});
 				pocketMonsters.push(pokemon);
 			},
