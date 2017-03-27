@@ -14,7 +14,6 @@ $(document).ready(function(){
 				counter++;
 				$("#progressbar").progressbar({
   					value: (counter/49)*100,
-  					complete: $("#progressbar").hide()
 				});
 				pocketMonsters.push(pokemon);
 			},
