@@ -28,7 +28,7 @@ Tech used:
 
 * need to get the progress bar to disapear when done
 * need to understand the 504 erro and automatically request it again.
-* want to create a popUp so we can read detailed info of the pokemon both when searched and klicked on.
+* want to create a popUp so we can read detailed info of the pokemon both when searched for and klicked on.
 * needs to be faster
 * and maybe prettier
 
