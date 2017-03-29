@@ -5,7 +5,7 @@
 So this is a small examination project for a **JavaScript** course as
 **Front-End developer** at **Nackademin** in stockholm
 
-[livelink on the way]("patience my friend")
+[livelink on the way](https://owenjose.github.io/javascript2-second-assignment/PocketMonstrIndex.html "patience my friend")
 
 ---
 
@@ -28,9 +28,12 @@ Tech used:
 
 * need to get the progress bar to disapear when done
 * need to understand the 504 erro and automatically request it again.
+* to be able to load lots of pokemons (I get 90 before the first 504 error)
 * want to create a popUp so we can read detailed info of the pokemon both when searched for and klicked on.
 * needs to be faster
 * and maybe prettier
+* display search result
+* backgroundcolor to match pokéType
 
 Written by 
 __Owen José__
