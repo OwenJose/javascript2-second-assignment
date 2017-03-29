@@ -25,6 +25,10 @@ ol{
 ol li{
 	margin: .5em;
 }
+#pokeList li{
+	background: linear-gradient(-45deg, red, yellow);
+
+}
 #pokeList{
 	margin: 67.3px 0 0 0;
 	padding: 0;
@@ -51,4 +55,7 @@ ol li{
 	z-index: 100;
 	background-color: rgba(0, 0, 0, .8);
 	color: white;
+}
+#progressbar{
+	margin-top: 1em;
 }
