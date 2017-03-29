@@ -1,15 +1,15 @@
-#__javascript2-second-assignment__
+# __javascript2-second-assignment__
 
 ---
 
 So this is a small examination project for a **JavaScript** course as
 **Front-End developer** at **Nackademin** in stockholm
 
-[livelink on the way]( "patience my friend")
+[livelink on the way]("patience my friend")
 
 ---
 
-##__The Idea__
+## __The Idea__
 
 I was thinkin of creating a PokéDex, meaning that i want with ease find info about one or every pokémon
 
@@ -22,7 +22,7 @@ Tech used:
 
 ---
 
-##__Things missing__
+## __Things missing__
 (except for a mastercoder)
 
 
