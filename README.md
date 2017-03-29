@@ -7,8 +7,6 @@ So this is a small examination project for a **JavaScript** course as
 
 [It's alive!!](https://owenjose.github.io/javascript2-second-assignment/PocketMonsterIndex.html "patience my friend")
 
-Basically this is what i was thinkin --> (https://www.pokedex.org/)
-
 ---
 
 ## __The Idea__
@@ -21,6 +19,8 @@ Tech used:
 * CSS
 * jQuery
 * jQueryUI
+
+Basically this is what i was thinkin --> (https://www.pokedex.org/)
 
 ---
 
