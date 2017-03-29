@@ -6,8 +6,8 @@ So this is a small examination project for a **JavaScript** course as
 **Front-End developer** at **Nackademin** in stockholm
 
 [It's alive!!](https://owenjose.github.io/javascript2-second-assignment/PocketMonsterIndex.html "patience my friend")
-
 Basically this is what i was thinkin --> (https://www.pokedex.org/)
+
 ---
 
 ## __The Idea__
