@@ -20,7 +20,7 @@ Tech used:
 * jQuery
 * jQueryUI
 
-Basically this is what i was thinkin --> (https://www.pokedex.org/)
+Basically this is what i was thinkin [-->](https://www.pokedex.org/)
 
 ---
 
