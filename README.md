@@ -5,7 +5,7 @@
 So this is a small examination project for a **JavaScript** course as
 **Front-End developer** at **Nackademin** in stockholm
 
-[livelink on the way](https://owenjose.github.io/javascript2-second-assignment/PocketMonstrIndex.html "patience my friend")
+[It's alive!!](https://owenjose.github.io/javascript2-second-assignment/PocketMonsterIndex.html "patience my friend")
 
 ---
 
