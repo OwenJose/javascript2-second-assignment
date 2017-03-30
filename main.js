@@ -24,7 +24,7 @@ const PocketMonsters = (function() {
 					allPokemons.push(pokemon);
 				},
 				error: function(argument) {
-					alert(argument);
+					alert("No Worko");
 				}
 			});
 		};
@@ -107,7 +107,7 @@ const PocketMonsters = (function() {
 	});
 
 	$("#searchInput").keydown(function(e){
-		let pocketMonsters = PocketMonsters.allPokemons;
+		let pocketMonsters = PocketMonsters.getPokeAlfabetisally();
     	// when searchig for a sertain type of pokemon, since it's usally more than one we need an array...
     	// or maybe we should just display them directly.
     	let typeList = [];
