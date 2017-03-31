@@ -1,5 +1,5 @@
 body{
-	background-image: url(img/pokemon_icon.png)
+	/*background-image: url(img/pokemon_icon.png)*/
 }
 nav ul{
 	position: fixed;
@@ -77,4 +77,8 @@ ol li{
   width: 50%;
   height: 75%;
   background-color: rgba(0, 0, 0, 0.9); 
+}
+#info-box{
+	color: white;
+	margin: auto;
 }
