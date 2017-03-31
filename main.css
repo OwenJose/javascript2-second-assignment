@@ -1,3 +1,6 @@
+body{
+	background-image: url(img/pokemon_icon.png)
+}
 nav ul{
 	position: fixed;
 	left: 0;
@@ -26,17 +29,22 @@ ol li{
 	margin: .5em;
 }
 #pokeList li{
-	background: linear-gradient(-45deg, red, yellow);
-
+	margin: 1em;
+	width: 100px;
+	border-style: outset;
+	background-color: rgba(0, 0, 0, .8);
+}
+#pokeList li:hover{
+	border-style: inset;
+	background-color: rgba(0, 0, 0, .5);	
 }
 #pokeList{
-	margin: 67.3px 0 0 0;
+	margin: 84.9px 0 0 0;
 	padding: 0;
 	list-style-type: none;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;	
+	justify-content: center;	
 }
 #searchInput{
 	position: fixed;
@@ -57,5 +65,16 @@ ol li{
 	color: white;
 }
 #progressbar{
-	margin-top: 1em;
+	margin-top: 84.9px;
+}
+#pop-up {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding: 0;
+  left: 25%;
+  top: 12.5%;
+  width: 50%;
+  height: 75%;
+  background-color: rgba(0, 0, 0, 0.9); 
 }
