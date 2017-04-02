@@ -147,8 +147,8 @@ const PocketMonsters = (function() {
 			// css background-color pokemons with only one type $("img").css(background-color: red;)
 		}
 	};
-	// almost every click uses it
-	let removePopUp = () => {
+	// almost every click uses 
+	let hidePopUp = () => {
 		$("#pop-up").fadeOut("fast");
 		$("#info-box").empty();
 	};
@@ -158,16 +158,16 @@ const PocketMonsters = (function() {
 		$("#info-box").empty();
 	});
 	$("#hamburger").on("click", function(){
-		removePopUp();
+		hidePopUp();
 		$("#menu").slideToggle("slow");
 	});
 	$("#search").on("click", function(){
-		removePopUp();
+		hidePopUp();
 		$("#searchInput").slideToggle().focus().val("");
 	});
 	$("#pokeList img").on("click", function(){
 		console.log(this.id);
-		removePopUp();
+		hidePopUp();
 		$.ajax({
 			type: "GET",
 			url: "http://pokeapi.co/api/v2/pokemon/" + this.id,
@@ -188,6 +188,8 @@ const PocketMonsters = (function() {
 	$("#searchInput").autocomplete({
 		source: gettingNames()
 	});
+
+	// sorting functions not uppdated
 
 	// $("ol li:nth-child(2)").on("click", function(){
 	// 	let pocketMonsters = PocketMonsters.getPokeAlfabetisally();
@@ -224,12 +226,9 @@ const PocketMonsters = (function() {
 						$("#searchInput").val("");
 					}
 	    		});
-  				// console.log("YES!!");
-  				// $("#info-box").append('<img src="img/' + parseInt($("#searchInput").val()) + '.png">');
-  				// $("#pop-up").fadeIn();
-  				// $("#searchInput").slideUp();
   			}
-	 	
+	 		
+	 		// if the string does not match name ti looks for type
 		 	else if (isNaN($("#searchInput").val()) === true) {
 	    		$.ajax({
 					type: "GET",
@@ -248,7 +247,8 @@ const PocketMonsters = (function() {
 						$("#searchInput").val("");
 					}
 	    		});
-	    		// $("#info-box").append('<img src="img/' + parseInt($("#searchInput").val()) + '.png">');
+
+	    	// looks for a pokemon ID that match the input
 	    	}
 		    else{
 		    	if (parseInt($("#searchInput").val()) > 151){
@@ -284,6 +284,9 @@ const PocketMonsters = (function() {
 	
 })();
 
-// * need to get the progress bar to disapear when done!!
-// * need to understand the 504 erro and automatically request it again.
-// * want to create a popUp so we can read detailed info of the pokemon both when searched and klicked on.
+// * a progressbar or loding indicator
+// * adding more info in the pop-up
+// * and maybe prettier
+// * backgroundcolor to match pokéType
+// * adding the rest of the pokemongenerations
+// * add autofill/autocomplete function to the input field
