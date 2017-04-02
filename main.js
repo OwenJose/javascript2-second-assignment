@@ -85,7 +85,7 @@ const PocketMonsters = (function() {
 
 // my collection of clickables,- and a mouseleave functions.
 (function() {
-	
+
 	let pocketMonsters = PocketMonsters.allPokemons;
 	const colors = {
 		bug: "#d1fcd7",
@@ -129,7 +129,7 @@ const PocketMonsters = (function() {
 		}
 		return false;
 	}
-
+	// the info that i beeing displayed
 	let addingInfo = (pokemon) => {
 		$("#searchInput").slideUp();
 		$("#pop-up").fadeIn();
@@ -137,11 +137,17 @@ const PocketMonsters = (function() {
 		$("#info-box").append('<img src="img/' + pokemon.id + '.png">');
 		$("#info-box").append('<h2> #' + pokemon.id + '</h2>');
 		$("#info-box").append('<h3> Name: ' + pokemon.name + '</h2>');
-		$("#info-box").append('<h3> Primery type: ' + pokemon.types[0].type.name + '</h2>');
-		if (pokemon.types.length > 1)
+		if (pokemon.types.length > 1){
+			$("#info-box").append('<h3> Primery type: ' + pokemon.types[0].type.name + '</h2>');
 			$("#info-box").append('<h3> Scondery type: ' + pokemon.types[1].type.name + '</h2>');
+			// css background pokemons with 2 types $("img").css(background: linear-gradient(-45deg, red, yellow);)
+		}
+		else{
+			$("#info-box").append('<h3> Primery type: ' + pokemon.types[0].type.name + '</h2>');
+			// css background-color pokemons with only one type $("img").css(background-color: red;)
+		}
 	};
-
+	// almost every click uses it
 	let removePopUp = () => {
 		$("#pop-up").fadeOut("fast");
 		$("#info-box").empty();
@@ -160,6 +166,7 @@ const PocketMonsters = (function() {
 		$("#searchInput").slideToggle().focus().val("");
 	});
 	$("#pokeList img").on("click", function(){
+		console.log(this.id);
 		removePopUp();
 		$.ajax({
 			type: "GET",
@@ -175,7 +182,9 @@ const PocketMonsters = (function() {
 
 	$("#menu").on("mouseleave", function(){
 		$("#menu").slideUp("fast");
-	});	
+	});
+
+	// no worko!!!
 	$("#searchInput").autocomplete({
 		source: gettingNames()
 	});
@@ -270,9 +279,7 @@ const PocketMonsters = (function() {
 	
 	$("");
 
-	// css background pokemons with 2 types $("img").css(background: linear-gradient(-45deg, red, yellow);)
-
-	// css background-color pokemons with only one type $("img").css(background-color: red;)
+	
 	
 	
 })();
