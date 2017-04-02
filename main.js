@@ -147,15 +147,15 @@ const PocketMonsters = (function() {
 			// css background-color pokemons with only one type $("img").css(background-color: red;)
 		}
 	};
-	// almost every click uses 
-	let hidePopUp = () => {
+
+	// removes pop-up and empties inputfield
+	let removePopUp = () => {
 		$("#pop-up").fadeOut("fast");
 		$("#info-box").empty();
 	};
 
 	$("#pop-up").on("click", function(){
-		$("#pop-up").fadeOut("fast");
-		$("#info-box").empty();
+		removePopUp()
 	});
 	$("#hamburger").on("click", function(){
 		hidePopUp();
@@ -230,12 +230,10 @@ const PocketMonsters = (function() {
 	 		
 	 		// if the string does not match name ti looks for type
 		 	else if (isNaN($("#searchInput").val()) === true) {
-	    		$.ajax({
+	    			$.ajax({
 					type: "GET",
 					url: "http://pokeapi.co/api/v2/type/" + $("#searchInput").val() + "/",
 					success: function(type){
-						console.log("YES!!" + "success");
-						console.log(type);
 						for (var i = 0; i < type.pokemon.length; i++) {
 							console.log(type.pokemon[i].pokemon.name);
 							$("#pop-up").fadeIn();
@@ -246,16 +244,13 @@ const PocketMonsters = (function() {
 						alert($("#searchInput").val() + " is not a pokemon, nor is it a pokemon type, not even an ID-number");
 						$("#searchInput").val("");
 					}
-	    		});
-
-	    	// looks for a pokemon ID that match the input
+    			});
 	    	}
 		    else{
 		    	if (parseInt($("#searchInput").val()) > 151){
 		    		alert("Sorry only dealing first gen pokemon");
 		    	}
-			    	
-		    	else{	
+			    else{	
 			    	$.ajax({
 						type: "GET",
 						url: "http://pokeapi.co/api/v2/pokemon/" + parseInt($("#searchInput").val()),
@@ -266,8 +261,8 @@ const PocketMonsters = (function() {
 							alert("No Worko");
 						}
 			    	});
-			    }	
-		    }
+				}	
+			}
 		}
 	});
 })();
