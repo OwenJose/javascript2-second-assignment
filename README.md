@@ -32,7 +32,8 @@ Basically this is what i was aiming for [-->](https://www.pokedex.org/)
 * adding more info in the pop-up
 * and maybe prettier
 * backgroundcolor to match pokéType
-* adding the rest ao the pokemons
+* adding the rest of the pokemongenerations
+* add autofill/autocomplete function to the inputfield
 
 Written by 
 __Owen José__
