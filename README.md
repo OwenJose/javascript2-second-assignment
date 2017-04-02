@@ -20,7 +20,7 @@ Tech used:
 * jQuery
 * jQueryUI
 
-Basically this is what i was thinkin [-->](https://www.pokedex.org/)
+Basically this is what i was aiming for [-->](https://www.pokedex.org/)
 
 ---
 
@@ -28,14 +28,11 @@ Basically this is what i was thinkin [-->](https://www.pokedex.org/)
 (except for a mastercoder)
 
 
-* need to get the progress bar to disapear when done
-* need to understand the 504 erro and automatically request it again.
-* to be able to load lots of pokemons (I get 90 before the first 504 error)
-* want to create a popUp so we can read detailed info of the pokemon both when searched for and klicked on.
-* needs to be faster
+* a progressbar or loding indicator
+* adding more info in the pop-up
 * and maybe prettier
-* display search result
 * backgroundcolor to match pokéType
+* adding the rest ao the pokemons
 
 Written by 
 __Owen José__
