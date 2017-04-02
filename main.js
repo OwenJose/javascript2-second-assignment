@@ -147,15 +147,14 @@ const PocketMonsters = (function() {
 			// css background-color pokemons with only one type $("img").css(background-color: red;)
 		}
 	};
-	// almost every click uses it
+	// removes pop-up and empties inputfield
 	let removePopUp = () => {
 		$("#pop-up").fadeOut("fast");
 		$("#info-box").empty();
 	};
 
 	$("#pop-up").on("click", function(){
-		$("#pop-up").fadeOut("fast");
-		$("#info-box").empty();
+		removePopUp()
 	});
 	$("#hamburger").on("click", function(){
 		removePopUp();
@@ -223,7 +222,7 @@ const PocketMonsters = (function() {
 						alert("somthing went wrong!, let's try again");
 						$("#searchInput").val("");
 					}
-	    		});
+	    			});
   				// console.log("YES!!");
   				// $("#info-box").append('<img src="img/' + parseInt($("#searchInput").val()) + '.png">');
   				// $("#pop-up").fadeIn();
@@ -231,12 +230,10 @@ const PocketMonsters = (function() {
   			}
 	 	
 		 	else if (isNaN($("#searchInput").val()) === true) {
-	    		$.ajax({
+	    			$.ajax({
 					type: "GET",
 					url: "http://pokeapi.co/api/v2/type/" + $("#searchInput").val() + "/",
 					success: function(type){
-						console.log("YES!!" + "success");
-						console.log(type);
 						for (var i = 0; i < type.pokemon.length; i++) {
 							console.log(type.pokemon[i].pokemon.name);
 							$("#pop-up").fadeIn();
@@ -247,16 +244,15 @@ const PocketMonsters = (function() {
 						alert($("#searchInput").val() + " is not a pokemon, nor is it a pokemon type, not even an ID-number");
 						$("#searchInput").val("");
 					}
-	    		});
-	    		// $("#info-box").append('<img src="img/' + parseInt($("#searchInput").val()) + '.png">');
-	    	}
-		    else{
-		    	if (parseInt($("#searchInput").val()) > 151){
-		    		alert("Sorry only dealing first gen pokemon");
-		    	}
+	    			});
+	    		}
+		    	else{
+		    		if (parseInt($("#searchInput").val()) > 151){
+		    			alert("Sorry only dealing first gen pokemon");
+		    		}
 			    	
-		    	else{	
-			    	$.ajax({
+		    		else{	
+			    		$.ajax({
 						type: "GET",
 						url: "http://pokeapi.co/api/v2/pokemon/" + parseInt($("#searchInput").val()),
 						success: function(pokemon){
@@ -265,9 +261,9 @@ const PocketMonsters = (function() {
 						error: function(argument) {
 							alert("No Worko");
 						}
-			    	});
-			    }	
-		    }
+			    		});
+			    	}	
+		    	}
 		}
 	});
 })();
