@@ -149,13 +149,13 @@ const PocketMonsters = (function() {
 	};
 
 	// removes pop-up and empties inputfield
-	let removePopUp = () => {
+	let hidePopUp = () => {
 		$("#pop-up").fadeOut("fast");
 		$("#info-box").empty();
 	};
 
 	$("#pop-up").on("click", function(){
-		removePopUp()
+		hidePopUp()
 	});
 	$("#hamburger").on("click", function(){
 		hidePopUp();
