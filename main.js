@@ -213,7 +213,7 @@ const PocketMonsters = (function() {
 	$("#searchInput").keydown(function(e){
 		// when pressing enter on the keyboard
 		if (e.keyCode == 13) {
-			// compare the string input with the stored pokmon names an returns true
+			// compare the string input with the stored pokemon names and returns true
 			if (comperingString($("#searchInput").val()) === true) {
   				$.ajax({
 					type: "GET",
@@ -235,9 +235,10 @@ const PocketMonsters = (function() {
 					url: "http://pokeapi.co/api/v2/type/" + $("#searchInput").val() + "/",
 					success: function(type){
 						for (var i = 0; i < type.pokemon.length; i++) {
-							console.log(type.pokemon[i].pokemon.name);
+							$("#info-box").append(" " + type.pokemon[i].pokemon.name + "\n");
 							$("#pop-up").fadeIn();
 		    				$("#searchInput").slideUp();
+
 						}
 					},
 					error: function(argument) {
